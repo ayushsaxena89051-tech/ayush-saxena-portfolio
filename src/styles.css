@@ -184,10 +184,10 @@ body { margin: 0; font-family: var(--font-sans); letter-spacing: 0; }
 @media (min-width: 1500px) { .hero-art { right: calc((100vw - 1200px)/2); } }
 @media (max-width: 767px) {
  .portfolio-container { width: calc(100% - 40px); }
- .hero { min-height: 790px; }
+ .hero { min-height: 725px; }
  .hero-copy { padding-top: 58px; }
  .hero-title { font-size: 64px; }
- .hero-art { width: 380px; height: 380px; right: -30px; top: 385px; opacity: .65; }
+ .hero-art { width: 270px; height: 270px; right: -45px; top: 455px; opacity: .4; }
  .hero-bottom { bottom: 22px; }
  .section { padding-block: 58px; }
  .section-heading { font-size: 32px; }

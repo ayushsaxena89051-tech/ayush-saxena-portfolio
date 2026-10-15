@@ -69,7 +69,7 @@ function Index() {
 
       <section id="about" className="section">
         <div className="portfolio-container grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-20">
-          <div><SectionTitle number="01" label="About me" title="Driven by curiosity.\nGrounded in learning." /><p className="mt-5 section-lead">Every great journey starts with a first step.<br />This is mine.</p></div>
+          <div><SectionTitle number="01" label="About me" title="Driven by curiosity. Grounded in learning." /><p className="mt-5 section-lead">Every great journey starts with a first step.<br />This is mine.</p></div>
           <div><p className="text-base leading-8">Hi, I’m Ayush — a first-year Computer Science student at <span className="text-primary">JECRC University</span>, taking my first steps into the world of technology.</p><p className="mt-4 section-lead">I’m interested in how things work, how code can solve everyday problems, and how a simple idea can become something useful. My focus right now is building a strong foundation, exploring new tools, and learning one step at a time.</p><div className="mt-7 flex flex-wrap gap-3"><span className="tag"><Code2 size={13} className="mr-2 text-primary" /> Aspiring developer</span><span className="tag"><BookOpen size={13} className="mr-2 text-signal" /> Lifelong learner</span><span className="tag"><Sparkles size={13} className="mr-2 text-signal-secondary" /> Curious thinker</span></div></div>
         </div>
       </section>
