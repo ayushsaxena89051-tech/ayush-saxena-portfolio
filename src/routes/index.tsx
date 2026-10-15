@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, ArrowRight, ArrowDown, Github, Linkedin, Menu, X, Code2, GraduationCap, MapPin, Braces, Terminal, Award, BookOpen, Sparkles, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import cube from "@/assets/developer-cube.jpg";
+import cube from "@/assets/identity-cube.jpg";
+import { PortfolioChat } from "@/components/portfolio-chat";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -54,7 +55,7 @@ function Index() {
 
     <main>
       <section id="home" className="hero">
-        <img src={cube} className="hero-art" alt="Sculptural glass cube with a glowing green core" width={1024} height={1024} />
+        <img src={cube} className="hero-art" alt="Cobalt blue sculpture with a citrus ring and sky-blue glass" width={1024} height={1024} />
         <div className="portfolio-container">
           <div className="hero-copy enter">
             <div className="flex items-center gap-2.5"><span className="status-dot" /><span className="eyebrow text-primary">A curious mind. A builder in the making.</span></div>
@@ -88,5 +89,6 @@ function Index() {
     <footer className="border-t border-border"><div className="portfolio-container flex flex-col gap-5 py-7 sm:flex-row sm:items-center sm:justify-between"><a className="wordmark" href="#home">AS<span className="text-primary">.</span></a><p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Ayush Saxena. Built with curiosity.</p><div className="flex items-center gap-4"><Button variant="ghost" size="icon" aria-label="GitHub profile" onClick={() => setSocial("GitHub")}><Github /></Button><Button variant="ghost" size="icon" aria-label="LinkedIn profile" onClick={() => setSocial("LinkedIn")}><Linkedin /></Button><Button asChild variant="navigation" size="icon"><a href="#home" aria-label="Back to top"><ArrowRight className="-rotate-90" /></a></Button></div></div></footer>
     <Dialog open={project !== null} onOpenChange={open => { if (!open) setProject(null); }}><DialogContent><DialogHeader><DialogTitle>{project?.name}</DialogTitle><DialogDescription className="pt-4 leading-7">{project?.detail}</DialogDescription></DialogHeader><div className="flex flex-wrap gap-2">{project?.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div></DialogContent></Dialog>
     <Dialog open={social !== null} onOpenChange={open => { if (!open) setSocial(null); }}><DialogContent><DialogHeader><DialogTitle>Connect on {social}</DialogTitle><DialogDescription className="pt-3 leading-7">Ayush’s personal {social} link hasn’t been added yet. Check back soon.</DialogDescription></DialogHeader><Button asChild variant="portfolio"><a href={social === "GitHub" ? "https://github.com" : "https://www.linkedin.com"} target="_blank" rel="noopener noreferrer">Visit {social} <ArrowUpRight /></a></Button></DialogContent></Dialog>
+    <PortfolioChat />
   </>;
 }
